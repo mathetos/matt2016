@@ -1,0 +1,31 @@
+ li#customize-control-archive_layout ul li {
+position: relative;
+}
+
+ #customize-control-archive_layout label input{ /* HIDE RADIO */
+  opacity: 0;
+  position: absolute; /* Remove input from document flow */
+  display: block;
+width: 100%;
+height: 100%;
+}
+ #customize-control-archive_layout label img{ /* IMAGE STYLES */
+	cursor:pointer;
+	-webkit-transition: all 500ms ease-in-out;
+	-moz-transition: all 500ms ease-in-out;
+	-ms-transition: all 500ms ease-in-out;
+	-o-transition: all 500ms ease-in-out;
+	transition: all 500ms ease-in-out;
+}
+ #customize-control-archive_layout label input:checked + img { /* (RADIO CHECKED) IMAGE STYLES */
+	opacity: 0;
+	-webkit-transition: all 500ms ease-in-out;
+	-moz-transition: all 500ms ease-in-out;
+	-ms-transition: all 500ms ease-in-out;
+	-o-transition: all 500ms ease-in-out;
+	transition: all 500ms ease-in-out;
+}
+
+li.full_content {background: url('layout/img/full-content-checked.jpg') no-repeat;}
+li.excerpt {background: url('layout/img/excerpt-checked.jpg') no-repeat;}
+li.fancy_rollover {background: url('layout/img/fancy-rollover-checked.jpg') no-repeat;}

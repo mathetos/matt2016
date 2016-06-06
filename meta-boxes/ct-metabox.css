@@ -1,0 +1,99 @@
+/**
+ * CT Meta Box Stylesheet
+ */
+
+.ctmb-field {
+	margin: 12px 0;
+}
+
+	.ctmb-field.ctmb-no-top-margin {
+		margin-top: 0;
+	}
+
+	.ctmb-field.ctmb-no-bottom-margin {
+		margin-bottom: 0;
+	}
+
+	.ctmb-name {
+		display: inline-block;
+		vertical-align: top;
+		width: 25%;
+		max-width: 200px;
+		font-weight: bold;
+		margin-top: 3px;
+	}
+
+		.ctmb-name span { /* (Optional) or (Required) */
+			color: #595959;
+			font-weight: normal;
+		}
+
+	.ctmb-value {
+		display: inline-block;
+		vertical-align: top;
+		width: 70%;
+	}
+
+		/* can also use widefat class for 100% */
+
+		.ctmb-value input[type=text],
+		.ctmb-value textarea {
+			width: 70%; /* leaves just enough room for butto on right */
+		}
+
+		.ctmb-value textarea {
+			height: 56px;
+		}
+		.ctmb-value input[type=text].ctmb-large {
+			width: 100%;
+		}
+		input[type=text].ctmb-medium,
+		textarea.ctmb-medium {
+			width: 250px;
+		}
+
+		input[type=text].ctmb-small,
+		textarea.ctmb-small {
+			width: 100px;
+		}
+
+		input[type=text].ctmb-tiny,
+		textarea.ctmb-tiny {
+			width: 40px;
+		}
+
+		/* Date */
+
+		.ctmb-date {
+			vertical-align: baseline;
+		}
+
+			.ctmb-date-day {
+				width: 45px;
+			}
+
+			.ctmb-date-year {
+				width: 60px;
+			}
+
+		/* Upload */
+
+		.ctmb-upload,
+		.ctmb-upload_textarea,
+		.ctmb-upload-file {
+			vertical-align: middle;
+		}
+
+/* Hidden Fields */
+
+.ctmb-hidden {
+	display: none;
+}
+
+/* Side Column */
+
+#side-sortables .ctmb-name,
+#side-sortables .ctmb-value {
+	width: 100%;
+	display: block;
+}

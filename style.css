@@ -5,12 +5,16 @@
  Author:       Matt
  Author URI:   https://mattcromwell.dev
  Template:     beyond-2016
- Version:      1.1.1
+ Version:      1.1.2
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
- Template Version: 1.1.1
+ Template Version: 1.1.2
  GitHub Theme URI: https://github.com/mathetos/matt2016
  GitHub Branch:    master
+
+## CHANGELOG
+1.1.2 June 16, 2016
+-- Commented out a var_dump that output the whole usermeta on the author.php page. Oops!
 
  /* == Add your own styles below this line ==
 --------------------------------------------*/

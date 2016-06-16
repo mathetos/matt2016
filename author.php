@@ -22,7 +22,7 @@ get_header(); ?>
 			<?php if ( have_posts() ) : 
 				the_post();
 				$user =  get_user_meta($authorid);
-				var_dump($user);
+				//var_dump($user);
 			?>
 				<article id="author-<?php echo $authorid; ?>" <?php post_class(); ?>>
 					<header class="page-header">

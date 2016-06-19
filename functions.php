@@ -31,17 +31,35 @@ function custom_give_archive_title( $title ) {
 
 }
 
-//add_filter('beyond2016_after_content_single', 'matt2016_add_cc_licensing');
+/*
+ *  Excludes Password Protected posts from the
+ *  Archive and Category loops.
+ *
+ */
 
-function matt2016_add_cc_licensing() {
+function exclude_passworded_posts($post) {
+  global $post;
+  $b16ecom_exclude = post_password_required($post->ID);
 
-  //$content = the_content();
-  
-  if (is_singular('post')) {
+  if ($b16ecom_exclude == true) {
+    $excludepass = false;
+  } else {
+    $excludepass = true;
+  }
+  return apply_filters('exclude-passworded-posts', $excludepass);
+}
 
-    $cc = '<p prefix="dct: http://purl.org/dc/terms/ cc: http://creativecommons.org/ns#" class="cc-block"><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="CC BY-NC-SA 4.0" class="cc-button     lazyloaded" src="https://www.mattcromwell.com/wp-content/plugins/creative-commons-configurator-1/media/cc/by-nc-sa/4.0/80x15.png" data-lazy-src="https://www.mattcromwell.com/wp-content/plugins/creative-commons-configurator-1/media/cc/by-nc-sa/4.0/80x15.png" width="80" height="15"><noscript>&lt;img alt="CC BY-NC-SA 4.0" class="cc-button" src="https://www.mattcromwell.com/wp-content/plugins/creative-commons-configurator-1/media/cc/by-nc-sa/4.0/80x15.png" width="80" height="15" /&gt;</noscript></a><a href="https://www.mattcromwell.com/building-front-end-profile-editor-caldera-forms/" title="Permalink to Caldera Forms Makes for a Great Profile Editor"><link href="http://purl.org/dc/dcmitype/Text" rel="dct:type" property="dct:type"><span property="dct:title">Caldera Forms Makes for a Great Profile Editor</span></a> by <a href="https://www.mattcromwell.com/author/matt/" property="cc:attributionName" rel="cc:attributionURL">Matt Cromwell</a> is licensed under a <a rel="license" target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>';
-  
-    
-  } 
-  return $cc;
+function b16ecom_comment_count() {
+
+  global $post;
+  $commentsnum = wp_count_comments($post->ID);
+
+  if ($commentsnum->total_comments > 14) {
+    $popular = '<p style=quot;font-size: 80%; font-style: italics; quot;><span class=&quot;genericon genericon-digg&quot;></span>Popular Post :</p>';
+  } else {
+    $popular = '';
+  }
+
+  return $popular;
+
 }

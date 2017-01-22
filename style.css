@@ -5,14 +5,17 @@
  Author:       Matt
  Author URI:   https://mattcromwell.dev
  Template:     beyond2016
- Version:      1.1.4
+ Version:      1.1.5
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
- Template Version: 1.1.4
+ Template Version: 1.1.5
  GitHub Theme URI: https://github.com/mathetos/matt2016
  GitHub Branch:    master
 
 ## CHANGELOG
+1.1.5 January 21, 2017
+-- Deleted "TEST" that I had prepended on oembed's for testing purposes
+
 1.1.2 June 16, 2016
 -- Commented out a var_dump that output the whole usermeta on the author.php page. Oops!
 

@@ -74,7 +74,7 @@
 
 		<p class="wp-embed-heading">
 			<a href="<?php the_permalink(); ?>" target="_top">
-				TEST: <?php the_title(); ?>
+				<?php the_title(); ?>
 			</a>
 		</p>
 

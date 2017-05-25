@@ -66,6 +66,12 @@
 			);
 		?>
 
+        <?php
+            echo '<a href="#comments">';
+                comments_number( 'No Comments', 'One Comment', '% Comments' );
+            echo '</a>';
+        ?>
+
 		<?php
             if ( is_singular('post') ) {
 
